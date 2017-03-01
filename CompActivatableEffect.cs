@@ -16,6 +16,7 @@ namespace CompActivatableEffect
         #region Graphics
 
         private Graphic graphicInt;
+        private Color overrideColor = Color.white;
         private bool showNow = false;
         public bool ShowNow
         {
@@ -79,12 +80,21 @@ namespace CompActivatableEffect
                         badGraphic = BaseContent.BadGraphic;
                         return badGraphic;
                     }
-                    this.graphicInt = this.Props.graphicData.GraphicColoredFor(this.parent);
+                    Color newColor1 = overrideColor == Color.white ? this.parent.DrawColor : overrideColor;
+                    Color newColor2 = overrideColor == Color.white ? this.parent.DrawColorTwo : overrideColor;
+                    this.graphicInt = this.Props.graphicData.Graphic.GetColoredVersion(this.parent.Graphic.Shader, newColor1, newColor2);
+                    this.graphicInt = PostGraphicEffects(graphicInt);
                 }
                 badGraphic = this.graphicInt;
                 return badGraphic;
             }
         }
+
+        public virtual Graphic PostGraphicEffects(Graphic graphic)
+        {
+            return graphic;
+        }
+
         public override void PostDraw()
         {
             base.PostDraw();
