@@ -3,7 +3,7 @@ using Verse;
 
 namespace CompActivatableEffect
 {
-    internal class CompProperties_ActivatableEffect : CompProperties
+    public class CompProperties_ActivatableEffect : CompProperties
     {
         public GraphicData graphicData;
 
@@ -19,6 +19,8 @@ namespace CompActivatableEffect
         public SoundDef deactivateSound;
 
         public bool gizmosOnEquip = false;
+
+        public bool draftToUseGizmos = true;
 
         public float Altitude
         {

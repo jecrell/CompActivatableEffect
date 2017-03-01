@@ -10,7 +10,7 @@ using Harmony;
 
 namespace CompActivatableEffect
 {
-    internal class CompActivatableEffect : CompUseEffect
+    public class CompActivatableEffect : CompUseEffect
     {
 
         #region Graphics
@@ -83,8 +83,8 @@ namespace CompActivatableEffect
                     Color newColor1 = overrideColor == Color.white ? this.parent.DrawColor : overrideColor;
                     Color newColor2 = overrideColor == Color.white ? this.parent.DrawColorTwo : overrideColor;
                     this.graphicInt = this.Props.graphicData.Graphic.GetColoredVersion(this.parent.Graphic.Shader, newColor1, newColor2);
-                    this.graphicInt = PostGraphicEffects(graphicInt);
                 }
+                this.graphicInt = PostGraphicEffects(graphicInt);
                 badGraphic = this.graphicInt;
                 return badGraphic;
             }
@@ -236,12 +236,18 @@ namespace CompActivatableEffect
         public override void CompTick()
         {
             if (!IsInitialized) Initialize();
+            if (IsActive()) ActiveTick();
             base.CompTick();
+        }
+
+        public virtual void ActiveTick()
+        {
         }
         
         public IEnumerable<Gizmo> EquippedGizmos()
         {
             //Add
+            if ((this.Props.draftToUseGizmos && GetPawn.Drafted) || !this.Props.draftToUseGizmos)
             if (currentState == State.Activated)
             {
                 yield return new Command_Action

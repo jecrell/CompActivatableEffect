@@ -182,7 +182,7 @@ namespace CompActivatableEffect
                                     if (deflector != null)
                                     {
                                         float numMod = (float)((int)AccessTools.Property(deflector.GetType(), "AnimationDeflectionTicks").GetValue(deflector, null));
-                                        Log.ErrorOnce("NumMod " + numMod.ToString(), 1239);
+                                        //Log.ErrorOnce("NumMod " + numMod.ToString(), 1239);
                                         numMod = (numMod + 1) / 2;
                                         if (subtract) num -= numMod;
                                         else num += numMod;
