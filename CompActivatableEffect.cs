@@ -83,8 +83,8 @@ namespace CompActivatableEffect
                     Color newColor1 = overrideColor == Color.white ? this.parent.DrawColor : overrideColor;
                     Color newColor2 = overrideColor == Color.white ? this.parent.DrawColorTwo : overrideColor;
                     this.graphicInt = this.Props.graphicData.Graphic.GetColoredVersion(this.parent.Graphic.Shader, newColor1, newColor2);
+                    this.graphicInt = PostGraphicEffects(graphicInt);
                 }
-                this.graphicInt = PostGraphicEffects(graphicInt);
                 badGraphic = this.graphicInt;
                 return badGraphic;
             }
