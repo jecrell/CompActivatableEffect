@@ -21,10 +21,23 @@ namespace CompActivatableEffect
             harmony.Patch(typeof(Pawn).GetMethod("GetGizmos"), null, new HarmonyMethod(typeof(HarmonyCompActivatableEffect).GetMethod("GetGizmosPrefix")));
             harmony.Patch(typeof(PawnRenderer).GetMethod("DrawEquipmentAiming"), null, new HarmonyMethod(typeof(HarmonyCompActivatableEffect).GetMethod("DrawEquipmentAimingPostFix")));
             harmony.Patch(typeof(Verb).GetMethod("TryStartCastOn"), new HarmonyMethod(typeof(HarmonyCompActivatableEffect).GetMethod("TryStartCastOnPrefix")), null);
-
+            harmony.Patch(typeof(Pawn_EquipmentTracker).GetMethod("Remove"), null, new HarmonyMethod(typeof(HarmonyCompActivatableEffect).GetMethod("Remove_PostFix")));
+        }
+        
+        // Verse.Pawn_EquipmentTracker
+        public static void Remove_PostFix(Pawn_EquipmentTracker __instance, ThingWithComps eq)
+        {
+            CompActivatableEffect compActivatableEffect = eq.GetComp<CompActivatableEffect>();
+            if (compActivatableEffect != null)
+            {
+                if (compActivatableEffect.CurrentState == CompActivatableEffect.State.Activated)
+                {
+                    compActivatableEffect.Deactivate();
+                }
+            }
         }
 
-        
+
 
         //=================================== COMPACTIVATABLE
 

@@ -5,3 +5,16 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\CompActivatableEffect\Com
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\CompActivatableEffect\CompActivatableEffect\obj\Debug\CompActivatableEffect.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\CompActivatableEffect\Assemblies\Languages\English\Keyed\CompActivatableEffect.xml
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\CompActivatableEffect\Assemblies\CompActivatableEffect.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Assemblies\Languages\English\Keyed\CompActivatableEffect.xml
+D:\SteamLibrary\steamapps\common\RimWorld\Assemblies\CompActivatableEffect.dll
+D:\SteamLibrary\steamapps\common\RimWorld\CompActivatableEffect\obj\Debug\CompActivatableEffect.csprojResolveAssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\CompActivatableEffect\obj\Debug\CompActivatableEffect.dll
+D:\SteamLibrary\steamapps\common\RimWorld\CompActivatableEffect\Assemblies\Languages\English\Keyed\CompActivatableEffect.xml
+D:\SteamLibrary\steamapps\common\RimWorld\CompActivatableEffect\Assemblies\CompActivatableEffect.dll
+D:\SteamLibrary\steamapps\common\RimWorld\CompActivatableEffect\Assemblies\0Harmony.dll
+D:\SteamLibrary\steamapps\common\RimWorld\CompActivatableEffect\Assemblies\Assembly-CSharp.dll
+D:\SteamLibrary\steamapps\common\RimWorld\CompActivatableEffect\Assemblies\UnityEngine.dll
+D:\SteamLibrary\steamapps\common\RimWorld\CompActivatableEffect\Assemblies\Assembly-CSharp-firstpass.dll
+D:\SteamLibrary\steamapps\common\RimWorld\CompActivatableEffect\Assemblies\NAudio.dll
+D:\SteamLibrary\steamapps\common\RimWorld\CompActivatableEffect\Assemblies\NVorbis.dll
+D:\SteamLibrary\steamapps\common\RimWorld\CompActivatableEffect\Assemblies\UnityEngine.xml
